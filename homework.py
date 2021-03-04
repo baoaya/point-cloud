@@ -7,16 +7,6 @@ INPUT_DIR = "/Users/jimmy/Desktop/PointCloud/homework/1/test/"
 OUTPUT_DIR = "/Users/jimmy/Desktop/PointCloud/homework/1/output/"
 
 
-def get_path(name, note):
-    """
-    获取结果保存路径
-    :param name: 文件名
-    :param note: 文件的注释，区分是哪个结果
-    :return: 路径
-    """
-    return os.path.join(OUTPUT_DIR, name + "-" + note + ".jpg")
-
-
 def get_file_list(directory, ext=".txt"):
     """获取目录下所有制定扩展名的文件.
     directory 为需要获取文件的目录
@@ -191,7 +181,7 @@ def main():
         ax.set_title('Downsample Centroid')
         show_downsample(ax, ds_centroid)
 
-        plt.savefig(get_path(name,"pca"))
+        plt.savefig(os.path.join(OUTPUT_DIR, name + ".jpg"))
         plt.cla()
     return
 

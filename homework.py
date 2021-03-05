@@ -128,7 +128,7 @@ def show_normals(ax, x, normals):
     for i in range(x.shape[0]):
         nor = np.zeros((2, 3))
         nor[0] = x[i]
-        nor[1] = x[i] + (normals[i] * 0.02)
+        nor[1] = x[i] + (normals[i] * 0.05)
         ax.plot(nor[:, 0], nor[:, 1], nor[:, 2], linewidth=0.1)
     return
 
